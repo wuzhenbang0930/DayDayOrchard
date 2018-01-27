@@ -1,6 +1,12 @@
 <template>
   <div class="header">
-        
+        <div class="position">
+          <div>
+            <img src="https://huodongjd1.fruitday.com/sale/appxx/ci_20171025_1.png" title="">
+          </div>
+          <div id="map">沙河镇</div>
+        <i class="iconfont"></i>
+      </div>
   </div>
 </template>
 
@@ -19,6 +25,6 @@ export default {
 <style scoped>
 
   .header{
-   height:.37rem/* 37px */; background: red;width: 100%;
+   height:.37rem/* 37px */;width: 100%;display: flex;
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
+   <div class="hello">
      
-  </div>
+   </div>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
   name: 'HelloWorld1',
   data:function(){
   	return{
-  		
+
   	}
   }
 }
