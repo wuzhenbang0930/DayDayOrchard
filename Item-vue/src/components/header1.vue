@@ -1,8 +1,6 @@
 <template>
   <div class="header">
-        <header>
-          
-        </header>
+        
   </div>
 </template>
 
@@ -19,7 +17,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  header{
-   height:.37rem/* 37px */; background: red;
+
+  .header{
+   height:.37rem/* 37px */; background: red;width: 100%;
   }
 </style>

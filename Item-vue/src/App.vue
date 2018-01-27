@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <commit-header></commit-header>
-    <main1></main1>
+    <router-view class="mains" />
     <commit-footer></commit-footer>
   </div>
 </template>
@@ -28,5 +28,10 @@ html,body{
 html{
   font-size:31.25vw;
 }
-
+#app{display: flex;flex-direction: column;width: 100%;height: 100%}
+.mains{
+  flex:1;
+  background: blue;
+  width: 100%;
+}
 </style>
