@@ -48,7 +48,7 @@ export default {
   },
  
   mounted(){
-  	axios.get('/v3/product/category_list?store_id_list=3&class_id=').then((res) => {
+  	axios.get('/v3/v3/product/category_list?store_id_list=3&class_id=').then((res) => {
  				this.arr_item = res.data.data.classOneGroup
  			})
   	this.GetId('303')
@@ -58,7 +58,7 @@ export default {
  		GetId(id){
  			console.log(id)
  			console.log(this.$route.params)
- 			axios.get(`/v3/product/category_list?store_id_list=3&class_id=${id}`).then((res) =>{
+ 			axios.get(`/v3/v3/product/category_list?store_id_list=3&class_id=${id}`).then((res) =>{
  				this.arr_listmain  = res.data.data.childrenList[0].class3Group
  				this.arr_name = res.data.data.childrenList[0].class2Name
  				console.log(this.arr_name.name)

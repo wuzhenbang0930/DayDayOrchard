@@ -23,7 +23,8 @@ export default {
 
   .footer{
     height: .42rem/* 42px */;
-  
+    width: 100%;
+    background: #fff;
     font-size: 12px;
     text-decoration: none;
     position: relative;
@@ -32,12 +33,6 @@ export default {
     left: 0;
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
-    position: fixed;
-    top :  auto;
-    bottom: 0;
-=======
->>>>>>> 358e8153ba91a37c2de5ad5481e3d15fa0c71af5
   }
 
   .footer a{
