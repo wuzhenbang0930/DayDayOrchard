@@ -3,13 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import header1 from './components/header1'
-import footer1 from './components/footer1'
+
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+
+Vue.use(MintUI);
 
 
 
-Vue.component("commit-header", header1);
-Vue.component("commit-footer", footer1);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

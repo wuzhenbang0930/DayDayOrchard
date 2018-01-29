@@ -14,7 +14,7 @@ module.exports = {
         '/v3': {//这里是需要匹配的路径，如果匹配上了，则代理到目标服务器上
             target: 'https://wap.fruitday.com', //目标服务器
             changeOrigin: true, //开启代理
-            pathRewrite: { '^/v3': '/v3' }  //对访问路径进行替换操作
+            pathRewrite: { '^/v3': '/' }  //对访问路径进行替换操作
         }
     },
     host: 'localhost', // can be overwritten by process.env.HOST
