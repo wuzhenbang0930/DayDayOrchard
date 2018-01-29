@@ -2,7 +2,7 @@
   <div class="footer">
       
           <router-link to="/"><i class="iconfont icon-shouye"></i>首页</router-link>
-          <router-link to="/"><i class="iconfont icon-leimupinleifenleileibie"></i>分类</router-link>
+          <router-link to="/classify"><i class="iconfont icon-leimupinleifenleileibie"></i>分类</router-link>
           <router-link to="/"><i class="iconfont icon-gouwuche"></i>购物车</router-link>
           <router-link to="/"><i class="iconfont icon-wode"></i>我的</router-link>
   </div>
@@ -28,7 +28,10 @@ export default {
     font-size: 12px;
     text-decoration: none;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    position: fixed;
+    top :  auto;
+    bottom: 0;
   }
   .footer a{
     display: inline-block;  text-align: center;
