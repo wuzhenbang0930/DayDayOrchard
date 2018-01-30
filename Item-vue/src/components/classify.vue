@@ -1,8 +1,8 @@
 <template>
 	
   <div class="classify">
-     <div class="seach">
-     	<div class="zi">
+     <div class="seach" >
+     	<div class="zi" v-on:click="sousuo()">
      		<i class="iconfont icon-sousuo"></i>
      		奇异果 
      	</div>
@@ -59,15 +59,18 @@ export default {
  	methods:{
  		GetId(id){
  			console.log(id)
- 			console.log(this.$route.params)
+ 			// console.log(this.$route.params)
  			axios.get(`/v3/v3/product/category_list?store_id_list=3&class_id=${id}`).then((res) =>{
  				this.arr_listmain  = res.data.data.childrenList[0].class3Group
  				this.arr_name = res.data.data.childrenList[0].class2Name
  				console.log(this.arr_name.name)
-
  			})
  			
- 		}
+ 		},
+    sousuo(){
+      console.log(this)
+      this.$router.history.push({name: 'sousuo'})
+    }
  	}
 }
 </script>
