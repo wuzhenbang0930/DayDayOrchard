@@ -1,17 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-
 import classify from '@/components/classify'
-
 import detail from '@/components/detail'
-
 import iroot from '@/components/root'
-
-
-
 import details from '@/components/details'
 import detaila from '@/components/detaila'
+import sousuo from '@/components/sousuo'
+
+
 
 Vue.use(Router)
 
@@ -56,7 +53,11 @@ export default new Router({
       path: '/detaila:fid',
       name: 'detaila',
       component: detaila
-
+    },
+      {
+      path: '/sousuo',
+      name: 'sousuo',
+      component: sousuo
     }
 
     

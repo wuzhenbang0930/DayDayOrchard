@@ -19,21 +19,7 @@
 			<div class="section2">
 				<a href="#"><img :src="lunbo.mainBanners[5].content[0].image" alt="" width="100%"></a>
 			</div>
-		<!-- 	<div class="section3">
-				<router-link class="item" :to="{name:'detail', params:{fid: lunbo.mainBanners[6].content[0].target_id}}"> 
-					<div class="img-box"> 
-						<img :src="lunbo.mainBanners[6].content[0].image" alt="">       
-					 </div> 
-					 <div class="desc"> 
-					 	<h5>{{lunbo.mainBanners[6].content[0].title}}</h5> 
-					 	<p>{{lunbo.mainBanners[6].content[0].subtitle}}</p> 
-					 	 <div class="price">
-					 	  <span class="money">{{lunbo.mainBanners[6].content[0].price}}/<em>{{lunbo.mainBanners[6].content[0].volume}}</em></span> 
-					 	  <i class="iconfont">&#xe726;</i> 
-					 	</div> 
-					 </div> 
-					</router-link>
-			</div> -->
+		
 			<div class="section4">
 				<div class="manys">
 					<div v-for="item in lunbo.mainBanners[6].content" class="many-more">
@@ -48,11 +34,6 @@
 			 <div class="section2">
 				<a href="#"><img :src="lunbo.mainBanners[7].content[0].image" alt="" width="100%"></a>
 			</div>
-			<!-- <div class="section5">
-				<router-link :to="{name:'detail', params:{fid: lunbo.mainBanners[8].content[0].target_id}}"> 
-				<img :src="lunbo.mainBanners[8].content[0].image" alt="" width="60%">
-			    </router-link>
-			</div> -->
 			<div class="section6">
 				<a href="#"><img :src="lunbo.mainBanners[8].content[0].image" alt="" width="100%"></a>
 			</div>
@@ -130,7 +111,6 @@
 				<a href="#"><img :src="lunbo.mainBanners[19].content[0].image" alt="" width="100%"></a>
 			</div>
 			<div class="section3" v-for="item in lunbo.mainBanners[20].content">
-				<!-- <a class="item" href="#">  -->
 			    <router-link :to="{name:'detail', params:{fid: item.target_id}}" class="item">
 					<div class="img-box"> 
 						<img :src="item.image" alt="">       
@@ -169,7 +149,7 @@ export default {
   	}
   },
   mounted(){
-  	axios.get("/v3/v3/ad/homepage?connect_id=61s3ujrbrt7s71h9v2a603psn5&type=0&lonlat=116.25153%2C40.11623&ad_code=110114&tab_id=").then((res) =>{
+  	axios.get("/v3/v3/ad/homepage?connect_id=&type=0&lonlat=116.25153%2C40.11623&ad_code=110114&tab_id=").then((res) =>{
   		console.log(res.data.data);
   		this.lunbo = res.data.data.banner;
   		//console.log(res.data.data.banner.mainBanners[0].content);
