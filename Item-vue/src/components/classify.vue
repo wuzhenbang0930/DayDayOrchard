@@ -17,8 +17,10 @@
      			<h1>{{this.arr_name.name}}</h1>
      			<div class="flex1">
      				<dl v-for='itee in arr_listmain'>
-	     				<dt><img :src="itee.class_photo" alt=""></dt>
+              <router-link :to="{name:'iroot', params:{fid:itee.id}}">
+	     				<dt><img :src="itee.class_photo" alt="" ></dt>
 	     				<dd>{{itee.name}}</dd>
+            </router-link>
      				</dl>
      			</div>
      			

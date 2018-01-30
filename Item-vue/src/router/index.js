@@ -5,6 +5,7 @@ import HelloWorld from '@/components/HelloWorld'
 import classify from '@/components/classify'
 
 import detail from '@/components/detail'
+import iroot from '@/components/root'
 
 
 Vue.use(Router)
@@ -31,7 +32,11 @@ export default new Router({
       path: '/detail:fid',
       name: 'detail',
       component: detail
-
+    },
+    {
+      path : '/iroot:fid',
+      name : 'iroot',
+      component : iroot
     }
   ]
 })

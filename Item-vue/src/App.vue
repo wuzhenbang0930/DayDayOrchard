@@ -21,12 +21,12 @@ export default {
 
 <style>
 @import url("./assets/css/iconfont.css");
+@import url('./assets/swiper.css');
 *{
   margin: 0; padding: 0;box-sizing: border-box;
 }
 
 html,body{
-
    width: 100%; 
 }
  a{text-decoration:none;}
@@ -34,10 +34,10 @@ html,body{
  img{border:0;}
 
 html{
-  font-size:31.25vw; 
+  font-size:31.25vw; height: 100%;
 }
 
-#app{display: flex;flex-direction: column;height: 100%;width: 100%; flex-wrap: wrap}
+#app{display: flex;flex-direction: column;width: 100%;height: 100%; flex-wrap: wrap}
 .mains{
   flex:1;
   width: 100%;
