@@ -37,7 +37,7 @@ export default {
 
   .footer a{
     display: inline-block;  text-align: center;
-    text-decoration: none
+    text-decoration: none;color: #000;
 
   }
   .footer a i{

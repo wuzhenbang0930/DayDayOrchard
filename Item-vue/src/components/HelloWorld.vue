@@ -36,11 +36,13 @@
 			</div> -->
 			<div class="section4">
 				<div class="manys">
-					<a href="#" v-for="item in lunbo.mainBanners[6].content" class="many-more">
-						<img :src="item.image" alt="" width="100%;">
-						<p>{{item.title}}</p>
-						<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
-					</a>
+					<div v-for="item in lunbo.mainBanners[6].content" class="many-more">
+						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
+							<img :src="item.image" alt="" width="100%;">
+							<p>{{item.title}}</p>
+							<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
+						</router-link>
+					</div>
 				</div>
 			</div>
 			 <div class="section2">
@@ -56,11 +58,13 @@
 			</div>
 			<div class="section4">
 				<div class="manys">
-					<a href="#" v-for="item in lunbo.mainBanners[9].content" class="many-more">
-						<img :src="item.image" alt="" width="100%;">
-						<p>{{item.title}}</p>
-						<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
-					</a>
+					<div v-for="item in lunbo.mainBanners[9].content" class="many-more">
+						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
+							<img :src="item.image" alt="" width="100%;">
+							<p>{{item.title}}</p>
+							<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
+						</router-link>
+					</div>
 				</div>
 			</div>
 			<div class="section2">
@@ -71,11 +75,13 @@
 			</div>
 			<div class="section4">
 				<div class="manys">
-					<a href="#" v-for="item in lunbo.mainBanners[12].content" class="many-more">
-						<img :src="item.image" alt="" width="100%;">
-						<p>{{item.title}}</p>
-						<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
-					</a>
+					<div v-for="item in lunbo.mainBanners[12].content" class="many-more">
+						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
+							<img :src="item.image" alt="" width="100%;">
+							<p>{{item.title}}</p>
+							<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
+						</router-link>
+					</div>
 				</div>
 			</div>
 			<div class="section6">
@@ -83,11 +89,13 @@
 			</div>
 			<div class="section4">
 				<div class="manys">
-					<a href="#" v-for="item in lunbo.mainBanners[14].content" class="many-more">
-						<img :src="item.image" alt="" width="100%;">
-						<p>{{item.title}}</p>
-						<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
-					</a>
+					<div v-for="item in lunbo.mainBanners[14].content" class="many-more">
+						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
+							<img :src="item.image" alt="" width="100%;">
+							<p>{{item.title}}</p>
+							<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
+						</router-link>
+					</div>
 				</div>
 			</div>
 		    <div class="section6">
@@ -95,11 +103,13 @@
 			</div>
 				<div class="section4">
 				<div class="manys">
-					<a href="#" v-for="item in lunbo.mainBanners[16].content" class="many-more">
-						<img :src="item.image" alt="" width="100%;">
-						<p>{{item.title}}</p>
-						<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
-					</a>
+					<div v-for="item in lunbo.mainBanners[16].content" class="many-more">
+						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
+							<img :src="item.image" alt="" width="100%;">
+							<p>{{item.title}}</p>
+							<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
+						</router-link>
+					</div>
 				</div>
 			</div>
 			<div class="section6">
@@ -107,11 +117,13 @@
 			</div>
 			<div class="section4">
 				<div class="manys">
-					<a href="#" v-for="item in lunbo.mainBanners[18].content" class="many-more">
-						<img :src="item.image" alt="" width="100%;">
-						<p>{{item.title}}</p>
-						<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
-					</a>
+					<div v-for="item in lunbo.mainBanners[18].content" class="many-more">
+						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
+							<img :src="item.image" alt="" width="100%;">
+							<p>{{item.title}}</p>
+							<div class="price"> <span class="money">{{item.price}}/<em>{{item.volume}}</em></span> <i class="iconfont">&#xe726;</i></div>
+						</router-link>
+					</div>
 				</div>
 			</div>
 			<div class="section6">

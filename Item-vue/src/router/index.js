@@ -5,8 +5,8 @@ import HelloWorld from '@/components/HelloWorld'
 import classify from '@/components/classify'
 
 import detail from '@/components/detail'
-
-
+import details from '@/components/details'
+import detaila from '@/components/detaila'
 Vue.use(Router)
 
 export default new Router({
@@ -32,6 +32,20 @@ export default new Router({
       name: 'detail',
       component: detail
 
+    },
+    {
+      path: '/details:fid',
+      name: 'details',
+      component: details
+
+    },
+     {
+      path: '/detaila:fid',
+      name: 'detaila',
+      component: detaila
+
     }
+
+    
   ]
 })
