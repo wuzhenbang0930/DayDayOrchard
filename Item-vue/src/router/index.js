@@ -5,14 +5,14 @@ import HelloWorld from '@/components/HelloWorld'
 import classify from '@/components/classify'
 
 import detail from '@/components/detail'
-<<<<<<< HEAD
+
 import iroot from '@/components/root'
 
 
-=======
+
 import details from '@/components/details'
 import detaila from '@/components/detaila'
->>>>>>> bb4cb502da05b9a60457bb1bba3e47ca96cc05ed
+
 Vue.use(Router)
 
 export default new Router({
@@ -37,13 +37,13 @@ export default new Router({
       path: '/detail:fid',
       name: 'detail',
       component: detail
-<<<<<<< HEAD
+
     },
     {
       path : '/iroot:fid',
       name : 'iroot',
       component : iroot
-=======
+
 
     },
     {
@@ -57,7 +57,6 @@ export default new Router({
       name: 'detaila',
       component: detaila
 
->>>>>>> bb4cb502da05b9a60457bb1bba3e47ca96cc05ed
     }
 
     

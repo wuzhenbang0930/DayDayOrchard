@@ -9,14 +9,13 @@
 					<ul class="tab-menu">
 						<li class="active">商品</li>
 						<li><router-link :to="{name:'details', params:{fid: detail.productItem[0].id}}">详情</router-link></li>
-						<li><a>评价</a></li>
+						<li><router-link  :to="{name:'detaila', params:{fid: detail.productItem[0].id}}">评价</router-link></li>
 					</ul>
 			    </div>
 			    <div class="more">
 			    	<i class="iconfont">&#xe637;</i>
 			    </div>
 			</nav>
-      <router-view/> 
   <div class="mains">
 			<div class="lunbo">
 		   	    <mt-swipe :auto="4000">
@@ -31,7 +30,7 @@
 				</div> 
         <div class="size">  
           <span class="cur"> 
-            <strong>500g</strong> 
+            <strong>{{detail.productItem[0].volume}}</strong> 
             <small>  明日达  </small> 
           </span>   
           <em>{{detail.deliveryMsg}}</em> 
@@ -96,11 +95,11 @@ export default {
     axios.get(`/v3//v3/product/detail?store_id_list=3&product_id=${id}&store_id=3&delivery_code=3`)
       .then((res) => {
         console.log(res.data.data);
-        console.log(res.data.data.productItem[0].id);
         this.detail = res.data.data;
       })
       axios.get(`/v3//v3/comment/rate_and_comment?product_id=${id}`)
       .then((res) => {
+        //console.log(res.deta.data)
         this.appraise = res.data.data;
       })
   }
@@ -154,7 +153,7 @@ nav {
  margin-top: .1rem;
 }
 .size{display: flex;flex-direction: column;font-size: .14rem;margin-top: .1rem;}
-.cur{display:flex;border: .01rem solid #dcdcdc;border-radius: .04rem; padding: .04rem .1rem;margin: 0 .05rem; height: .5rem;line-height: 1.4;color: #3a3a3a;width: .6rem;flex-direction: column;margin-left: 40%;}
+.cur{display:flex;border: .01rem solid #dcdcdc;border-radius: .04rem; padding: .04rem .1rem;margin: 0 .05rem; height: .5rem;line-height: 1.4;color: #3a3a3a;width: .6rem;flex-direction: column;margin-left: 40%;background: #ff8000;color: #fff;}
 .size em {
     font-size: .1rem;
     display: block;

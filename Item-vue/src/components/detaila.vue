@@ -1,8 +1,8 @@
 <template>
-  <div class="detaila" v-if="detaila">
+  <div class="detaila" v-if="detaila&&evaluate">
       <nav>
           <div class="back">
-              <a href="#" class="iconfont">&#xe51b;</a>
+              <a href="javascript:history.go(-1)" class="iconfont">&#xe51b;</a>
             </div>
             <div class="tab">
             <ul class="tab-menu">
@@ -16,8 +16,56 @@
             </div>
         </nav>
 
+        <div class="good-comment">
+          <div id="good-comment-star">
+            <dl class="comment-level-item"> 
+              <dt>
+                <span>97%</span><span>好评</span>
+              </dt> 
+              <dd> 
+                <div> 
+                  <span class="pull-left">口感</span>  
+                  <img src="https://wap.fruitday.com/content/images/main/lighting_star@3x-cedc664b96.png">  
+                  <img src="https://wap.fruitday.com/content/images/main/lighting_star@3x-cedc664b96.png">  
+                  <img src="https://wap.fruitday.com/content/images/main/lighting_star@3x-cedc664b96.png">  
+                  <img src="https://wap.fruitday.com/content/images/main/lighting_star@3x-cedc664b96.png">   
+                  <img src="https://wap.fruitday.com/content/images/main/half_star@3x-f43e6f0b42.png">   
+                </div> 
+                <div> 
+                  <span class="pull-left">颜值</span>  
+                  <img src="https://wap.fruitday.com/content/images/main/lighting_star@3x-cedc664b96.png">  
+                  <img src="https://wap.fruitday.com/content/images/main/lighting_star@3x-cedc664b96.png">  
+                  <img src="https://wap.fruitday.com/content/images/main/lighting_star@3x-cedc664b96.png">  
+                  <img src="https://wap.fruitday.com/content/images/main/lighting_star@3x-cedc664b96.png">   
+                  <img src="https://wap.fruitday.com/content/images/main/half_star@3x-f43e6f0b42.png">  
+                </div> 
+              </dd> 
+            </dl> 
+            <div class="comment-tab-menu"> 
+              <ul> 
+                <li class="active">评价 44951</li>
+                <li class="">晒图 9781</li> 
+              </ul> 
+            </div>
+          </div>
 
-        <div class="good-comment"></div>
+           <div class="comment-con-chief" v-for="item in evaluate"> 
+            <div class="comment-info"> 
+                <div class="comment-in">
+                  <img class="avatar" :src="item.userface"> 
+                  <span class="user">{{item.user_name}}</span>
+                </div>
+              <span class="date">{{item.time}}</span>
+            </div> 
+            <div class="comment-level">
+              <span>口感 {{item.star_eat}}</span>
+              <span>颜值 {{item.star_show}}</span>
+            </div> 
+              <div class="comment-msg">{{item.content}}</div>  
+            </div>
+
+            <div style="height: .5rem"></div>
+        </div>
 
 
         <footer class="main-nav" id="cart-nav">
@@ -37,7 +85,8 @@ export default {
   name: 'particulars',
   data:function(){
   	return{
-      detaila:"null"
+      detaila:null,
+      evaluate:null
   	}
   },
   mounted(){
@@ -50,7 +99,7 @@ export default {
       axios.get(`/v3//v3/comment/list_by_product_id?product_id=${id}&curr_page=1&num_per_page=20&limit=20&show=1`)
       .then((res) => {
         console.log(res.data.data);
-        //this.detaila = res.data.data;
+        this.evaluate = res.data.data;
       })
   }
 }
@@ -143,5 +192,105 @@ nav {
 .add-cart em{font-style: italic!important;}
 .good-comment{
   margin-top: .45rem;
+  font-size: .14rem;
+}
+.comment-level-item {
+    padding: .1rem .1rem;
+    height: .7rem;
+    display: flex;
+}
+.comment-level-item>dt {
+    width: 20%;
+    height: .5rem;
+    padding: .08rem 0;
+    margin-right: .3rem;
+    border-radius: 50%;
+    background: #ff8000;
+    font-size: .14rem;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.comment-level-item>dd {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.comment-level-item>dd>div {
+    height: .24rem;
+    line-height: .24rem;
+    display: flex;
+}
+.comment-level-item>dd>div:first-child {
+    margin-bottom: .08rem;
+}
+.comment-level-item>dd>div>img {
+    margin-left: .15rem;
+    margin-top: .02rem;
+    width: .2rem;
+    height: .2rem;
+}
+.comment-tab-menu {
+    padding: .2rem 0;
+    border-top: .01rem solid #d8d8d8;
+    border-bottom: .01rem solid #d8d8d8;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+.comment-tab-menu>ul {
+    border: .01rem solid #ff8000;
+    border-radius: .06rem;
+    display: flex;
+    width: 2rem;
+}
+.comment-tab-menu>ul>li {
+    display: inline-block;
+    min-width: 1rem;
+    height: .32rem;
+    padding: 0 .05rem;
+    line-height: .32rem;
+    color: #ff8000;
+    text-align: center;
+}
+.comment-tab-menu>ul>li.active {
+    background: #ff8000;
+    color: #fff;
+}
+.comment-con-chief {
+    padding: .15rem .1rem .15rem .1rem;
+    color: #3a3a3a;
+    background: #fff;
+    font-size: .14rem;
+}
+.comment-info {
+    height: .3rem;
+    line-height: .3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.comment-in{
+  display: flex;
+}
+.avatar {
+    width: .3rem;
+    height: .3rem;
+    margin-right: .15rem;
+    border-radius: 100%;
+}
+.user {
+    margin-right: .05rem;
+    font-size: .14rem;
+}
+.comment-info>.date {
+    font-size: .13rem;
+    color: #878787;
+}
+.comment-level {
+    height: .3rem;
+    font-size: .13rem;
+    line-height: .3rem;
+    color: #878787;
 }
 </style>

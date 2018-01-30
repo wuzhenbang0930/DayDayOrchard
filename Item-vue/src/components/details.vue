@@ -2,7 +2,7 @@
 	<div class="particulars" v-if="details">
 			<nav>
 					<div class="back">
-					    <a href="#" class="iconfont">&#xe51b;</a>
+					    <a href="javascript:history.go(-1)" class="iconfont">&#xe51b;</a>
 				    </div>
 				    <div class="tab">
 						<ul class="tab-menu">
@@ -74,7 +74,7 @@ nav {
 .tab ul li:nth-child(2) a{color: #75a739}
 .tab ul li:nth-child(2){border-bottom: 2px solid #75a739}
 .more{width: 25%;text-align: right;padding-right: 0.1rem;}
-.details-desc{margin-top: .45rem}
+.details-desc{margin-top: .45rem;font-size: .14rem}
 .main-nav {
     height: .5rem;
     line-height: .5rem;
