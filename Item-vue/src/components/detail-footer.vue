@@ -1,6 +1,7 @@
 <template>
 	<div class="foot" v-if="commodity">
 		<footer class="main-nav" id="cart-nav">
+
           <router-link class="cart-btn" to="/cart">
             <i class="iconfont" style="font-size: .3rem">&#xe620;</i> 
             <span id="cart-num" >{{$store.state.cart.length}}</span>

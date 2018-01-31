@@ -7,9 +7,7 @@ import iroot from '@/components/root'
 import details from '@/components/details'
 import detaila from '@/components/detaila'
 import sousuo from '@/components/sousuo'
-
 import cart from '@/components/cart'
-
 import login from '@/components/login'
 import myhome from '@/components/myhome'
 
@@ -69,7 +67,8 @@ export default new Router({
      {
       path: '/cart',
       name: 'cart',
-      component: cart
+      component: cart,
+      meta:{auth:true} 
     },
 
     {
@@ -80,7 +79,8 @@ export default new Router({
     {
       path : '/myhome',
       name : 'myhome',
-      component : myhome
+      component : myhome,
+      meta:{auth:true} 
     }
 
     

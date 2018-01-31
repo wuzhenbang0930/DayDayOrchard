@@ -47,7 +47,11 @@
 	</div>
 </template>
 <script>
+
+import axios from 'axios'
+
     import indexfoot from './footer1'
+
 	export default{
 		name:"cart",
 		data:function(){
@@ -69,6 +73,7 @@
         components:{
             indexfoot,
         }
+
 	}
 
 

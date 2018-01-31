@@ -3,7 +3,7 @@
     <nav>
       <div class="ppo">
         
-        <a href="###" class="iconfont icon-xiangzuo"></a>
+        <a href="/" class="iconfont icon-xiangzuo"></a>
         
       </div>
       <div class="nav2">
@@ -49,7 +49,8 @@ import axios from 'axios'
     methods:{
       login(){
         var name = this.$refs.tel.value;
-        var password = this.$refs.password.value
+        var password = this.$refs.password.value;
+        var that = this;
         axios.get('http://localhost:3000/first', {
           params: {
             name : name,
@@ -57,7 +58,13 @@ import axios from 'axios'
           }
         })
         .then(function (res) {
-          console.log(res)
+          if(res.data.code == 1){
+            alert(res.data.message)
+            that.$store.commit('changeLogin','100')  
+            that.$router.push({path:"/myhome"})
+          }else{
+            alert(res.data.message)
+          }
          
           
 

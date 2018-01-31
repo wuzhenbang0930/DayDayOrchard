@@ -7,7 +7,7 @@
               </div><div id="map">沙河镇</div>
               <i class="iconfont"></i>
             </div>
-            <i class="iconfont icon-searchpage">&#xe641;</i>
+            <router-link to='/sousuo' class="iconfont icon-searchpage">&#xe641;</router-link>
     </div>
   </header>
 </template>
