@@ -5,9 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-
+var session = require("express-session");
 var index = require('./routes/index');
 var users = require('./routes/users');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/doudoufei');
 
 var app = express();
 app.use(cors({
@@ -26,6 +29,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  resave: true, // don't save session if unmodified  
+  saveUninitialized: false, // don't create session until something stored  
+  secret: 'doudoufei' 
+}))
 
 app.use('/', index);
 app.use('/users', users);

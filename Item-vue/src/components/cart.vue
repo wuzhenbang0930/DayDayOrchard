@@ -44,6 +44,7 @@
 	</div>
 </template>
 <script>
+import axios from 'axios'
 	export default{
 		name:"cart",
 		data:function(){
@@ -51,9 +52,11 @@
 
 			}
 		},
-		mounted(){
-
-		}
+		beforeCreate(){
+            axios.get('http://localhost:3000/dashboard').then((res)=>{
+                console.log(res)
+            })
+		} 
 	}
 
 $(document).ready(function(e) {
