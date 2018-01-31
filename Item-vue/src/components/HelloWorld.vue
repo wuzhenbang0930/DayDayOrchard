@@ -19,10 +19,11 @@
 			<div class="section2">
 				<a href="#"><img :src="lunbo.mainBanners[5].content[0].image" alt="" width="100%"></a>
 			</div>
+
 		
 			<div class="section4">
 				<div class="manys">
-					<div v-for="item in lunbo.mainBanners[6].content" class="many-more">
+					<div v-for="item in lunbo.mainBanners[7].content" class="many-more">
 						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
 							<img :src="item.image" alt="" width="100%;">
 							<p>{{item.title}}</p>
@@ -32,14 +33,14 @@
 				</div>
 			</div>
 			 <div class="section2">
-				<a href="#"><img :src="lunbo.mainBanners[7].content[0].image" alt="" width="100%"></a>
-			</div>
-			<div class="section6">
 				<a href="#"><img :src="lunbo.mainBanners[8].content[0].image" alt="" width="100%"></a>
 			</div>
-			<div class="section4">
+			<div class="section6">
+				<a href="#"><img :src="lunbo.mainBanners[9].content[0].image" alt="" width="100%"></a>
+			</div>
+			 <div class="section4">
 				<div class="manys">
-					<div v-for="item in lunbo.mainBanners[9].content" class="many-more">
+					<div v-for="item in lunbo.mainBanners[10].content" class="many-more">
 						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
 							<img :src="item.image" alt="" width="100%;">
 							<p>{{item.title}}</p>
@@ -49,14 +50,14 @@
 				</div>
 			</div>
 			<div class="section2">
-				<a href="#"><img :src="lunbo.mainBanners[10].content[0].image" alt="" width="100%"></a>
+				<a href="#"><img :src="lunbo.mainBanners[11].content[0].image" alt="" width="100%"></a>
 			</div>
 			<div class="section6">
-				<a href="#"><img :src="lunbo.mainBanners[11].content[0].image" alt="" width="100%"></a>
+				<a href="#"><img :src="lunbo.mainBanners[12].content[0].image" alt="" width="100%"></a>
 			</div>
 			<div class="section4">
 				<div class="manys">
-					<div v-for="item in lunbo.mainBanners[12].content" class="many-more">
+					<div v-for="item in lunbo.mainBanners[13].content" class="many-more">
 						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
 							<img :src="item.image" alt="" width="100%;">
 							<p>{{item.title}}</p>
@@ -66,11 +67,11 @@
 				</div>
 			</div>
 			<div class="section6">
-				<a href="#"><img :src="lunbo.mainBanners[13].content[0].image" alt="" width="100%"></a>
+				<a href="#"><img :src="lunbo.mainBanners[14].content[0].image" alt="" width="100%"></a>
 			</div>
 			<div class="section4">
 				<div class="manys">
-					<div v-for="item in lunbo.mainBanners[14].content" class="many-more">
+					<div v-for="item in lunbo.mainBanners[15].content" class="many-more">
 						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
 							<img :src="item.image" alt="" width="100%;">
 							<p>{{item.title}}</p>
@@ -80,11 +81,11 @@
 				</div>
 			</div>
 		    <div class="section6">
-				<a href="#"><img :src="lunbo.mainBanners[15].content[0].image" alt="" width="100%"></a>
+				<a href="#"><img :src="lunbo.mainBanners[16].content[0].image" alt="" width="100%"></a>
 			</div>
 				<div class="section4">
 				<div class="manys">
-					<div v-for="item in lunbo.mainBanners[16].content" class="many-more">
+					<div v-for="item in lunbo.mainBanners[17].content" class="many-more">
 						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
 							<img :src="item.image" alt="" width="100%;">
 							<p>{{item.title}}</p>
@@ -94,11 +95,11 @@
 				</div>
 			</div>
 			<div class="section6">
-				<a href="#"><img :src="lunbo.mainBanners[17].content[0].image" alt="" width="100%"></a>
+				<a href="#"><img :src="lunbo.mainBanners[18].content[0].image" alt="" width="100%"></a>
 			</div>
 			<div class="section4">
 				<div class="manys">
-					<div v-for="item in lunbo.mainBanners[18].content" class="many-more">
+					<div v-for="item in lunbo.mainBanners[19].content" class="many-more">
 						<router-link :to="{name:'detail', params:{fid: item.target_id}}">
 							<img :src="item.image" alt="" width="100%;">
 							<p>{{item.title}}</p>
@@ -108,9 +109,9 @@
 				</div>
 			</div>
 			<div class="section6">
-				<a href="#"><img :src="lunbo.mainBanners[19].content[0].image" alt="" width="100%"></a>
+				<a href="#"><img :src="lunbo.mainBanners[20].content[0].image" alt="" width="100%"></a>
 			</div>
-			<div class="section3" v-for="item in lunbo.mainBanners[20].content">
+			<div class="section3" v-for="item in lunbo.mainBanners[21].content">
 			    <router-link :to="{name:'detail', params:{fid: item.target_id}}" class="item">
 					<div class="img-box"> 
 						<img :src="item.image" alt="">       
@@ -124,7 +125,7 @@
 					 	</div> 
 					 </div> 
 					</router-link>
-			</div>
+			</div> 
  
 			<div style="width: 100%;height: 0.5rem"></div>	
 		</template> 
