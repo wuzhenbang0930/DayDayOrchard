@@ -11,57 +11,33 @@
 			<i class="iconfont">&#xe728;</i> 
 		</div>
 
-		<!-- <div class="line-wrapper" v-for="item in $store.state.cart">
-		  <div class="line-scroll-wrapper">
-		    <div class="line-normal-wrapper">
-		      <div class="line-normal-left-wrapper">
-		        <div class="line-normal-avatar-wrapper">
-		        	<img :src="item.templatePhoto[0].middle_image"/>
-		        </div>
-		        <div class="line-normal-info-wrapper">
-		          <div class="line-normal-user-name">{{item.productInfo.product_name}}</div>
-		          <div class="line-normal-msg"><span>{{item.productItem[0].volume}}</span></div>
-		          <div class="line-normal-time">
-		          	<span class="price"><small>￥</small><em>{{item.productInfo.price}}</em></span>   <span class="tag" style="background: #FF8000;color: #fff"> 明日达  </span> 
-		          </div>
-		        </div>
-		      </div>
-		      <div class="line-normal-icon-wrapper">
-		      	<span class="minus">
-		      		<i class="icon-jian">-</i>
-		      	</span> 
-		      	<span class="num">1</span> 
-		      	<span class="plus">
-		      		<i class="icon-searchplus">+</i>
-		      	</span>
-		      </div>
-		    </div>
-		    <div class="line-btn-delete"><button>删除</button></div>
-		  </div>
-		</div> -->
-        <div v-for="item in $store.state.cart" class="line-wrapper">
-            <div class="left">
-                <div class="pro-img"><img :src="item.templatePhoto[0].middle_image"></div>
-                <div class="pro-main">
-                    <div>{{item.productInfo.product_name}}</div>
-                    <div>{{item.productItem[0].volume}}</div>
-                    <div>
-                        <span>￥</span>
-                        <em>{{item.productInfo.price}}</em>
-                        <span class="tag" style="background: #FF8000;color: #fff"> 明日达  </span>
+		
+        <div class="carts">
+            <div v-for="item in $store.state.cart" class="line-wrapper">
+                <div class="left">
+                    <div class="pro-img"><img :src="item.templatePhoto[0].middle_image"></div>
+                    <div class="pro-main">
+                        <div>{{item.productInfo.product_name}}</div>
+                        <div>{{item.productItem[0].volume}}</div>
+                        <div>
+                            <span>￥</span>
+                            <em>{{item.productInfo.price}}</em>
+                            <span class="tag" style="background: #FF8000;color: #fff"> 明日达  </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="count">
-                <span class="minus">
-                    <i class="icon-jian">-</i>
-                </span> 
-                <span class="num">1</span> 
-                <span class="plus">
-                    <i class="icon-searchplus">+</i>
-                </span>
+                <div class="count">
+                    <span class="minus">
+                        <i class="icon-jian">-</i>
+                    </span> 
+                    <span class="num">1</span> 
+                    <span class="plus">
+                        <i class="icon-searchplus">+</i>
+                    </span>
+                </div>
             </div>
         </div>
+        <div style="height: .42rem"></div>
       <indexfoot></indexfoot>
 	</div>
 </template>
@@ -88,7 +64,8 @@
 
 <style scoped>
 
-.top{height:.5rem;background: #fff;color: #75a739;font-size: .16rem;border-bottom: .01rem solid #d8d8d8;}
+.top{height:.5rem;background: #fff;color: #75a739;font-size: .16rem;border-bottom: .01rem solid #d8d8d8;
+position: fixed;top: 0;left: 0;width: 100%}
 .redact{font-size: .12rem!important;}
 .specific {
     height: .4rem;
@@ -98,6 +75,7 @@
     justify-content: space-between;
     border-bottom: 2px solid #d8d8d8;
     line-height: .4rem;
+    margin-top: .5rem;
  }
 .line-wrapper{width: 100%;display: flex;font-size: .14rem;padding:.1rem .15rem;border-bottom: 1px solid #ccc; justify-content: space-between;}
 .pro-img{    
@@ -166,4 +144,5 @@
 .num{
     margin: 0 .2rem;
 }
+.carts{overflow: auto}
 </style>
