@@ -1,10 +1,10 @@
 <template>
 	<div class="foot" v-if="commodity">
 		<footer class="main-nav" id="cart-nav">
-          <a class="cart-btn" href="./cart.html">
+          <router-link class="cart-btn" to="/cart">
             <i class="iconfont" style="font-size: .3rem">&#xe620;</i> 
-            <span id="cart-num" >0</span>
-          </a> 
+            <span id="cart-num" >{{$store.state.cart.length}}</span>
+          </router-link> 
           <button class="add-cart" @click="addToCart(commodity)">
             <span id="deliver">明日达</span><em>加入购物车</em>
           </button>
@@ -13,7 +13,8 @@
 </template>
 
 <script>
-	import axios from "axios"
+import { Toast } from 'mint-ui';
+import axios from "axios"
 	export default{
 		name:"detail-footer",
 		data:function(){
@@ -26,6 +27,7 @@
 				//启动action
 				//dispatch("action的名字")
 				this.$store.dispatch("addToCartA",commodity);
+                Toast('购物车添加成功');
 			}
 		},
 		mounted(){

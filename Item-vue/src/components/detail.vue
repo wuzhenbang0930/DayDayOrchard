@@ -3,7 +3,7 @@
 		<template v-if="detail&&appraise">
 			<nav>
 				<div class="back">
-				    <a href="javascript:history.go(-1)" class="iconfont">&#xe51b;</a>
+				    <router-link to="/" class="iconfont">&#xe51b;</router-link>
 			    </div>
 			    <div class="tab">
 					<ul class="tab-menu">

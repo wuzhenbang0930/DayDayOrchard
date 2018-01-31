@@ -11,7 +11,6 @@
 			<i class="iconfont">&#xe728;</i> 
 		</div>
 
-		
         <div class="carts">
             <div v-for="item in $store.state.cart" class="line-wrapper">
                 <div class="left">
@@ -37,7 +36,13 @@
                 </div>
             </div>
         </div>
-        <div style="height: .42rem"></div>
+        <div style="height: 1rem"></div>
+        <div class="base-nav" id="cart-nav" style="bottom: .42rem;">
+            <div class="info"> 
+                <div class="total">合计：<small>￥</small><em>{{prices}}</em></div>  
+            </div> 
+                <a class="account" href="javascript:;">结算 ({{$store.state.cart.length}})</a> 
+        </div>
       <indexfoot></indexfoot>
 	</div>
 </template>
@@ -47,11 +52,19 @@
 		name:"cart",
 		data:function(){
 			return{
-
+                prices:0
 			}
 		},
 		mounted(){
-
+            var len = this.$store.state.cart.length;
+            for(var i = 0;i<len;i ++){
+                this.prices += Number(this.$store.state.cart[i].productInfo.price)
+            }
+            //console.log(this.prices);
+             // var storage = window.localStorage;
+             // var data = storage.getItem("data");
+             //console.log(data);
+             
 		},
         components:{
             indexfoot,
@@ -144,5 +157,44 @@ position: fixed;top: 0;left: 0;width: 100%}
 .num{
     margin: 0 .2rem;
 }
-.carts{overflow: auto}
+.base-nav{
+    position: fixed;
+    font-size: .14rem;
+    display: flex;
+    height: .5rem;
+    background: #fff;
+    width: 100%;
+    padding: 0 .1rem;
+    justify-content: space-between;
+}
+.total {
+    font-size: .14rem;
+    color: #878787;
+    line-height: .5rem;
+}
+.total small {
+    font-size: .1rem;
+    color: #ff8000;
+}
+.total em{
+    color: #ff8000;
+    font-style: normal;
+}
+.account {
+    display: inline-block;
+    min-width: 1rem;
+    height: .5rem;
+    padding: 0 .05rem;
+    background: #ff8000;
+    font-size: .16rem;
+    line-height: .5rem;
+    color: #fff;
+    text-align: center;
+}
+.del{
+    line-height: .5rem;
+    font-size: .12rem;
+    color: #666;
+    padding-left: .3rem;
+}
 </style>
