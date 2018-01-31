@@ -2,10 +2,10 @@
   <div class="sousuo">
       <div class="sousuotop">
           <div class="sousuokuang"> 
-            <span class="sousuobar">
+            <router-link to='/' class="sousuobar">
                <i class="iconfont icon-xiangzuo"></i>
             返回
-            </span>
+            </router-link>
             <div class="kuang">
               <i class="iconfont icon-sousuo"></i>
               <input type="text" class="wenzi" placeholder="新鲜水果、生鲜 " v-on:keyup='up($el)' ref="pwdNum">

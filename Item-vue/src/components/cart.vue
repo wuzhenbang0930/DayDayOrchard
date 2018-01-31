@@ -42,11 +42,11 @@
 	</div>
 </template>
 <script>
-<<<<<<< HEAD
+
 import axios from 'axios'
-=======
+
     import indexfoot from './footer1'
->>>>>>> 3e65ffcfacd379994b9ffe2af2ec88cf79f0defd
+
 	export default{
 		name:"cart",
 		data:function(){
@@ -54,20 +54,13 @@ import axios from 'axios'
 
 			}
 		},
-<<<<<<< HEAD
-		beforeCreate(){
-            axios.get('http://localhost:3000/dashboard').then((res)=>{
-                console.log(res)
-            })
-		} 
-=======
 		mounted(){
 
 		},
         components:{
             indexfoot,
         }
->>>>>>> 3e65ffcfacd379994b9ffe2af2ec88cf79f0defd
+
 	}
 
 

@@ -3,7 +3,7 @@
     <nav>
       <div class="ppo">
         
-        <a href="###" class="iconfont icon-xiangzuo"></a>
+        <a href="/" class="iconfont icon-xiangzuo"></a>
         
       </div>
       <div class="nav2">
@@ -60,6 +60,7 @@ import axios from 'axios'
         .then(function (res) {
           if(res.data.code == 1){
             alert(res.data.message)
+            that.$store.commit('changeLogin','100')  
             that.$router.push({path:"/myhome"})
           }else{
             alert(res.data.message)

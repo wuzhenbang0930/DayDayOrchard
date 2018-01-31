@@ -1,10 +1,10 @@
 <template>
 	<div class="foot" v-if="commodity">
 		<footer class="main-nav" id="cart-nav">
-          <a class="cart-btn" href="./cart.html">
+          <router-link to="/cart" class="cart-btn" >
             <i class="iconfont" style="font-size: .3rem">&#xe620;</i> 
             <span id="cart-num" >0</span>
-          </a> 
+          </router-link> 
           <button class="add-cart" @click="addToCart(commodity)">
             <span id="deliver">明日达</span><em>加入购物车</em>
           </button>

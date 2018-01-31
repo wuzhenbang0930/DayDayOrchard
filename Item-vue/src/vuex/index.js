@@ -4,7 +4,8 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 var state = {
-	cart:[]
+	cart:[],
+	islogin : 0
 }
 
 
@@ -19,6 +20,9 @@ function saveTolocal(state){
 }
 
 const mutations = {
+	changeLogin : function(state,data1){
+    	state.isLogin = data1;
+  	},
 	addToCart : function(state,goods){
 		state.cart.push(goods);
 		saveTolocal(state);
@@ -28,7 +32,11 @@ const mutations = {
 const actions = {
 	addToCartA: function({commit},goods){
 		commit("addToCart",goods)
+	},
+	changeLoginA :function({commit},data1){
+		commit("change", data1)
 	}
+
 }
 
 export default new Vuex.Store({

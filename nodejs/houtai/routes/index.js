@@ -6,16 +6,7 @@ var UserModel = require("../model/User");
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-router.get('/dashboard', function(req, res, next) {
-	//判断用户是否登录，如果没登录跳转到login页面。
-	// if(req.session == null || req.session.username == null) {
-	// 	// res.render('login', { title: '登录页面' });
-	// 	res.redirect("/login"); // 重定向
-	// 	return;
-	// }
-	// res.render('dashboard', {});
-	res.send(req.session)
-});
+
 router.get('/first', function(req, res, next) {
 	console.log(req.session)
   var name = req.query.name;
