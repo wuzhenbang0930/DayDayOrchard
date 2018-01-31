@@ -8,6 +8,7 @@ import details from '@/components/details'
 import detaila from '@/components/detaila'
 import sousuo from '@/components/sousuo'
 import login from '@/components/login'
+import myhome from '@/components/myhome'
 
 
 
@@ -64,6 +65,11 @@ export default new Router({
       path : "/login",
       name : 'login',
       component : login
+    },
+    {
+      path : '/myhome',
+      name : 'myhome',
+      component : myhome
     }
 
     

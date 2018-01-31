@@ -15,19 +15,19 @@
         <div class="box">
           <div class="box1">
           	<i class="iconfont icon-shouji"></i>
-          	<input type="text" name="" id="" placeholder="手机号"/>
+          	<input type="text" name="" id="" placeholder="手机号" ref="tel"/>
           
           </div>
           
           <div class="box1">
           	<i class="iconfont icon-yuechi"></i>
-          	<input type="text" name="" id=""  placeholder="短信验证码"/>
+          	<input type="text" name="" id=""  placeholder="密码" ref="password"/>
           	
           </div>
           
        
           
-          <a href="javascript:;" class="btn-login dis" id="mobile-login-btn">登录</a>
+          <a v-on:click="login()" class="btn-login dis" id="mobile-login-btn" >登录</a>
           
        
        
@@ -38,11 +38,30 @@
   
 </template>
 <script>
+import axios from 'axios'
   export default {
     name: 'login',
     data () {
       return {
         
+      }
+    },
+    methods:{
+      login(){
+        var name = this.$refs.tel.value;
+        var password = this.$refs.password.value
+        axios.get('http://localhost:3000/first', {
+          params: {
+            name : name,
+            password : password
+          }
+        })
+        .then(function (res) {
+          console.log(res)
+         
+          
+
+        })
       }
     }
   }
