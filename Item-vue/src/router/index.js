@@ -11,6 +11,7 @@ import sousuo from '@/components/sousuo'
 import cart from '@/components/cart'
 
 import login from '@/components/login'
+import myhome from '@/components/myhome'
 
 
 
@@ -75,6 +76,11 @@ export default new Router({
       path : "/login",
       name : 'login',
       component : login
+    },
+    {
+      path : '/myhome',
+      name : 'myhome',
+      component : myhome
     }
 
     
