@@ -83,8 +83,6 @@ export default {
             if(res.data.data.length > 0){
               this.flag = !this.flag;
               this.flag1 = !this.flag1
-            }else if(hh == ""){
-              this.flag1 = true
             }
             this.arr_li = res.data.data;
             
@@ -159,7 +157,7 @@ export default {
   }
 
   .rootmain{
-  flex: 1; height: auto;  width: 100%; overflow: hidden;
+  flex: 1; height: auto;  width: 100%; overflow: hidden; margin-top:  .6rem/* 60px */;
 }
 
 .itemee{
