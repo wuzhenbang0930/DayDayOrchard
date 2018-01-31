@@ -7,7 +7,7 @@ import iroot from '@/components/root'
 import details from '@/components/details'
 import detaila from '@/components/detaila'
 import sousuo from '@/components/sousuo'
-
+import cart from '@/components/cart'
 
 
 Vue.use(Router)
@@ -58,8 +58,11 @@ export default new Router({
       path: '/sousuo',
       name: 'sousuo',
       component: sousuo
-    }
-
-    
+    },
+     {
+      path: '/cart',
+      name: 'cart',
+      component: cart
+    } 
   ]
 })
