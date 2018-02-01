@@ -10,7 +10,7 @@ import sousuo from '@/components/sousuo'
 import cart from '@/components/cart'
 import login from '@/components/login'
 import myhome from '@/components/myhome'
-
+import map from '@/components/map'
 
 
 
@@ -81,6 +81,11 @@ export default new Router({
       name : 'myhome',
       component : myhome,
       meta:{auth:true} 
+    },
+    {
+      path: '/map',
+      name: 'map',
+      component: map
     }
 
     

@@ -4,7 +4,7 @@
             <div class="position">
               <div id="arri-time">
                 <img src="https://huodongjd1.fruitday.com/sale/appxx/ci_20171025_1.png" title="">
-              </div><div id="map">沙河镇</div>
+              </div><div id="map"><router-link to="/map"> 沙河镇</router-link></div>
               <i class="iconfont"></i>
             </div>
             <router-link to='/sousuo' class="iconfont icon-searchpage">&#xe641;</router-link>
@@ -52,6 +52,7 @@ header{width: 100%;height: .37rem}
     overflow: hidden;
     text-overflow: ellipsis;
 }
+#map a{color: green;font-size: .14rem}
 .icon-searchpage {
     width: .36rem;
     height: .36rem;
